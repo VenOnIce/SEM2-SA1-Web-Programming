@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .border { /* adjusting the content inside .background */
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-around;
+            align-items: space;
+            margin-top: 25px;
+            padding: 15px;
+        }
+        .background { /* navigation bar background */
+            background-color: white; 
+            margin: -8px;
+            display: flexbox;
+            margin-top: -25px;
+        }
+        .navbar{ /* navigation bar */
+            padding: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }        
+        .listings{ /* Pictures */
+            list-style: none;
+            justify-content: left;
+            align-items: left;    
+            display: flex;     
+            margin-right: 10%;
+        }
+        .desc{ /* description */
+            list-style: none;
+            justify-content: left;
+            align-items: left;    
+            gap: 5px;
+                 
+        }
+        .cart { /* svg picture of a cart */
+            height: 50px;
+            list-style: none;
+            display: block;
+        }
+        .pictures { /* evenly sized for a neater look */
+            width: 250px; 
+            box-shadow: 2px 2px 5px 2px black; /* gives the image a shadow, similar to reference screenshot */
+            margin: 25px;
+        }
+        p { /* paragraph */
+            border-radius: 15px;
+            background-color: #ff8ec6;
+            padding: 30px;
+            margin: 5%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body style="background: #f0f0f0;">
+    <div>
+        <div class="background">
+            <div class="border">
+                <img src="TheDivider.png" style="height: 60px;"> <!--divider-->
+                <div>
+                    <ul class="navbar"> <!--navigation buttons-->
+                        <li style="padding: 5%;"><a href="SE4_WebAccessibility">Home</a></li>
+                        <li style="padding: 5%;"><a href="SE4_WebAccessibility">Blog</a></li>
+                        <li style="padding: 5%;"><a href="SE4_WebAccessibility">About me</a></li>
+                        <li><img src="shopping.svg" class="cart" alt="Shopping Cart"></li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <div>
+            <div>
+                <ul class="listings">
+                    <!--Ocean Photo--><li><img src="OceanPhoto.jpg" class="pictures"></li>
+                    <ul class="desc"> <!--extra ul that executes the button to be BELOW the description, instead of beside it-->
+                        <li><p>This was from a <b>fabulous trip</b> to the cost of Greenland with my family. The water was lovely—but very cold!</p></li>
+                        <li><button type="button" style="margin-left: 7%;">Add to basket</button></li>
+                    </ul>
+                </ul>
+            </div>
+            <div>
+                <ul class="listings"> <!--repeating code for each product-->
+                    <!--Bridge Photo--><li><img src="BridgePhoto.jpg" class="pictures"></li>
+                    <ul class="desc">
+                        <li><p>A picture of the Golden Gate Bridge. <b>New York! New York!</b></p></li>
+                        <li><button type="button" style="margin-left: 7%;">Add to basket</button></li>
+                    </ul>
+                </ul>
+            </div>
+            <div>
+                <ul class="listings">
+                    <!--Valley Photo--><li><img src="ValleyPhoto.jpg" class="pictures"></li>
+                    <ul class="desc">
+                        <li><p>Another great photo from Greenland. It's a <b>river valley</b> where a glacier used to be.</p></li>
+                        <li><button type="button" style="margin-left: 7%;">Add to basket</button></li>
+                    </ul>
+                </ul>
+            </div>
+            <div>
+                <ul class="listings">
+                    <!--Waterfall Photo--><li><img src="WaterfallPhoto.jpg" class="pictures"></li>
+                    <ul class="desc">
+                        <li><p>The waterfall made such a <b>lovely</b> sound. I could have fallen asleep!</p></li>
+                        <li><button type="button" style="margin-left: 7%;">Add to basket</button></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>        
+    </div>
+</body>
+<footer>
+    <p class="background">Copyright The Wondering Photographer 2018.</p> <!--Copyright footer-->
+</footer>
+</html>
